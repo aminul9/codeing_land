@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int m;
+    cin>>m;
+    int array[m];
+    for(int i=0;i<m;i++)
+        cin>>array[i];
+
+    if(m==1)
+    {
+        if(array[m-1]==15)
+            cout<<"DOWN"<<endl;
+       else if(array[m-1]==0)
+            cout<<"UP"<<endl;
+        else
+            cout<<"-1"<<endl;
+    }
+    else if(array[m-1]==15)
+            cout<<"DOWN"<<endl;
+    else if(array[m-1]==0)
+            cout<<"UP"<<endl;
+     else
+    {
+        if((array[m-2]<array[m-1]))
+            cout<<"UP"<<endl;
+        else
+            cout<<"DOWN"<<endl;
+
+    }
+
+    return 0;
+}
